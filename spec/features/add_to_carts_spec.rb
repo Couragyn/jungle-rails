@@ -23,6 +23,6 @@ RSpec.feature "Visitor adds to cart", type: :feature, js: true do
     add_buttons[0].click
 
     save_and_open_screenshot
-    page.has_content?('My Cart (1)')
+    expect(page.has_content?('My Cart (1)')).to be true
   end
 end
